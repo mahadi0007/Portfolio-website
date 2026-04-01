@@ -1,10 +1,27 @@
 export default function About() {
   return (
     <section id="about" className="py-24">
-      <h2 className="text-4xl font-bold mb-4">About Me</h2>
-      <p className="text-slate-300 max-w-2xl">
-        I am building my portfolio using React, Tailwind and Node.js.
-      </p>
+      <div className="grid gap-10 lg:grid-cols-2">
+        <div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+            About Me
+          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            I focus on building polished and user-friendly digital products.
+          </h2>
+        </div>
+
+        <div className="space-y-4 text-slate-400 leading-7">
+          <p>
+            I’m a developer who enjoys creating modern websites and web apps
+            with clean design, responsive layouts, and maintainable code.
+          </p>
+          <p>
+            My goal is to build projects that not only work well technically,
+            but also leave a strong visual impression on the people using them.
+          </p>
+        </div>
+      </div>
     </section>
   )
 }
