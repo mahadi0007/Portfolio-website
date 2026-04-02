@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import SectionReveal from "./components/SectionReveal"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
 import Skills from "./sections/Skills"
@@ -17,14 +18,14 @@ export default function App() {
 
       <main className="mx-auto max-w-6xl px-6">
         <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Education />
-        <Research />
-        <Achievements />
-        <Contact />
+        <SectionReveal><About /></SectionReveal>
+        <SectionReveal><Skills /></SectionReveal>
+        <SectionReveal><Experience /></SectionReveal>
+        <SectionReveal><Projects /></SectionReveal>
+        <SectionReveal><Education /></SectionReveal>
+        <SectionReveal><Research /></SectionReveal>
+        <SectionReveal><Achievements /></SectionReveal>
+        <SectionReveal><Contact /></SectionReveal>
       </main>
 
       <Footer />

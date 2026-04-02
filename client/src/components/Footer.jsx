@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-2xl font-bold text-white">
-              Md Mahadi <span className="text-cyan-400">Hasan</span>
+              <span className="text-cyan-400">Md Mahadi Hasan</span>
             </h3>
             <p className="mt-4 max-w-sm leading-7 text-slate-400">
               Frontend developer, AI-focused engineer, and researcher building
@@ -54,7 +54,7 @@ export default function Footer() {
               >
                 LinkedIn
               </a>
-              
+
               <a
                 href="https://github.com/mahadi0007"
                 target="_blank"

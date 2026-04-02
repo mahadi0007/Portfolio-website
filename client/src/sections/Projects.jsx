@@ -1,3 +1,4 @@
+import { useState } from "react"
 import multiAgentImg from "../assets/projects/spade.png"
 import sentimentImg from "../assets/projects/sentiment.png"
 import scraperImg from "../assets/projects/datascrapper.png"
@@ -5,6 +6,7 @@ import chatbotImg from "../assets/projects/healthaibot.png"
 import healifyImg from "../assets/projects/healify.png"
 import esgImg from "../assets/projects/un.png"
 import embryoImg from "../assets/projects/embryo.png"
+import ProjectModal from "../components/ProjectModal"
 
 const projects = [
   {
@@ -80,6 +82,8 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null)
+
   return (
     <section id="projects" className="py-24">
       <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -88,7 +92,8 @@ export default function Projects() {
             Featured Work
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Selected projects showcasing AI, full-stack systems, and real-world problem solving.
+            Selected projects showcasing AI, full-stack systems, and real-world
+            problem solving.
           </h2>
         </div>
 
@@ -101,9 +106,10 @@ export default function Projects() {
       <div className="grid gap-8">
         {projects.map((project) => (
           <article
-            style={{ transitionDelay: `${Math.random() * 0.1}s` }}
             key={project.title}
-            className="group grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-cyan-500/10 lg:grid-cols-[1.2fr_0.8fr]"          >
+            style={{ transitionDelay: `${Math.random() * 0.1}s` }}
+            className="group grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-cyan-500/10 lg:grid-cols-[1.2fr_0.8fr]"
+          >
             <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-4">
               <div className="mb-4 flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-cyan-400" />
@@ -117,7 +123,6 @@ export default function Projects() {
                   alt={project.title}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]"
                 />
-
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 transition group-hover:opacity-100" />
               </div>
             </div>
@@ -142,6 +147,13 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="mt-6 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-5 py-3 font-semibold text-cyan-300 transition hover:border-cyan-400 hover:bg-cyan-400/20"
+                >
+                  View Details
+                </button>
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -174,6 +186,13 @@ export default function Projects() {
           </article>
         ))}
       </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   )
 }
