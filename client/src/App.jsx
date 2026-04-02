@@ -5,6 +5,8 @@ import Skills from "./sections/Skills"
 import Experience from "./sections/Experience"
 import Projects from "./sections/Projects"
 import Education from "./sections/Education"
+import Research from "./sections/Research"
+import Achievements from "./sections/Achievements"
 import Contact from "./sections/Contact"
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
         <Experience />
         <Projects />
         <Education />
+        <Research />
+        <Achievements />
         <Contact />
       </main>
     </div>
