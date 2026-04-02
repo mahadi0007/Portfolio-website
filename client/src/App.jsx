@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
 import Skills from "./sections/Skills"
@@ -25,6 +26,8 @@ export default function App() {
         <Achievements />
         <Contact />
       </main>
+
+      <Footer />
     </div>
   )
 }
