@@ -6,6 +6,7 @@ const projects = [
     tech: ["Python", "SPADE", "AI/ML"],
     live: "#",
     github: "#",
+    youtube: null,
   },
   {
     title: " Sentinemnt Analysis",
@@ -14,6 +15,7 @@ const projects = [
     tech: ["Python", "Scikit-learn", "NLP"],
     live: "#",
     github: "#",
+    youtube: null,
   },
   {
     title: "Data scraper from google maps",
@@ -22,6 +24,7 @@ const projects = [
     tech: ["Python", "Selenium", "BeautifulSoup"],
     live: "#",
     github: "#",
+    youtube: null,
   },
   {
     title: "Health AI Chatbot",
@@ -30,6 +33,34 @@ const projects = [
     tech: ["Python", "TensorFlow", "Chatbot"],
     live: "#",
     github: "#",
+    youtube: null,
+  },
+  {
+    title: "Healify – AI Physiotherapy Assistant",
+    description:
+      "AI-powered healthcare platform integrating LLM + RAG with real-time computer vision for exercise tracking and posture analysis.",
+    tech: ["React", "FastAPI", "MongoDB", "WebSockets", "Azure"],
+    live: "#",
+    github: "#",
+    youtube: "#", // add link if available
+  },
+  {
+    title: "UN ESG START Platform",
+    description:
+      "Developed for the United Nations in Malaysia, supporting companies like Petronas with dashboards, localization, and dynamic PDF generation.",
+    tech: ["React", "REST API", "CI/CD", "React-chartjs2"],
+    live: "#",
+    github: "#",
+    youtube: null, // no video → button won't show
+  },
+  {
+    title: "AI-Based Embryo Classification",
+    description:
+      "Deep learning system using U-Net, Mask R-CNN, and GANs for microscopy image classification.",
+    tech: ["Python", "TensorFlow", "Deep Learning"],
+    live: "#",
+    github: "#",
+    youtube: "#", // optional
   },
 ]
 
@@ -92,7 +123,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={project.live}
                   className="rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:scale-[1.02]"
@@ -106,6 +137,17 @@ export default function Projects() {
                 >
                   GitHub
                 </a>
+
+                {project.youtube && (
+                  <a
+                    href={project.youtube}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl border border-red-500/40 bg-red-500/10 px-5 py-3 font-semibold text-red-300 transition hover:border-red-500 hover:bg-red-500/20"
+                  >
+                    YouTube
+                  </a>
+                )}
               </div>
             </div>
           </article>
