@@ -12,47 +12,65 @@ export default function Hero() {
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
           <p className="mb-4 inline-block rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
-            Aspiring AI Engineer
+            Aspiring AI Engineer • AI Researcher • Full Stack Web Developer
           </p>
 
           <h1 className="max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            I build modern, responsive, and clean web experiences.
+            I build modern,
+            <br />
+            responsive, and
+            <br />
+            data-driven digital
+            <br />
+            products.
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
-            I’m building high-quality web applications using React, Tailwind CSS,
-            Node.js, and modern development practices with a focus on clean UI
-            and great user experience.
+            Frontend developer with 3+ years of professional experience building
+            web interfaces, dashboards, and scalable applications with React,
+            Next.js, JavaScript, Python, and AI-driven technologies.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:scale-[1.02]"
-            >
-              View Projects
-            </a>
+          <a
+            href="#projects"
+            className="rounded-xl bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:scale-[1.02]"
+          >
+            View Projects
+          </a>
 
-            <a
-              href="#contact"
-              className="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
-            >
-              Contact Me
-            </a>
+          <a
+            href="#contact"
+            className="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400"
+          >
+            Contact Me
+          </a>
+
+          <a
+            href="/Md_Mahadi_Hasan_CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-xl border border-cyan-400/40 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-300 transition hover:border-cyan-400 hover:bg-cyan-400/20"
+          >
+            Preview CV
+          </a>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-400">
             <span className="rounded-full border border-white/10 px-3 py-1">
-              React
+              Python
             </span>
             <span className="rounded-full border border-white/10 px-3 py-1">
-              Tailwind CSS
-            </span>
-            <span className="rounded-full border border-white/10 px-3 py-1">
-              Node.js
+              React.js
             </span>
             <span className="rounded-full border border-white/10 px-3 py-1">
               JavaScript
+            </span>
+            <span className="rounded-full border border-white/10 px-3 py-1">
+              AI/Ml
+            </span>
+            <span className="rounded-full border border-white/10 px-3 py-1">
+              CI/CD
             </span>
           </div>
         </div>
@@ -70,23 +88,31 @@ export default function Hero() {
                 <span className="text-cyan-400">const</span>{" "}
                 <span className="text-white">developer</span> = {"{"}
               </div>
+
               <div className="pl-4">
                 name: <span className="text-emerald-300">"Md Mahadi Hasan"</span>,
               </div>
+
               <div className="pl-4">
-                role: <span className="text-emerald-300">"AI/ML Engineer"</span>,
+                role: <span className="text-emerald-300">"AI/Ml Engineer"</span>,
               </div>
+
               <div className="pl-4">
                 skills: [
                 <span className="text-emerald-300">"Python"</span>,{" "}
-                <span className="text-emerald-300">"SPADE"</span>,{" "}
                 <span className="text-emerald-300">"TensorFlow"</span>,{" "}
-                <span className="text-emerald-300">"Data Scraping"</span>]
+                <span className="text-emerald-300">"RAG"</span>,{" "}
+                <span className="text-emerald-300">"JavaScript"</span>],
+              </div>
 
-              </div>
               <div className="pl-4">
-                focus: <span className="text-emerald-300">"Beautiful and usable products"</span>
+                focus: <span className="text-emerald-300">"Scalable products and intelligent systems"</span>,
               </div>
+
+              <div className="pl-4">
+                experience: <span className="text-emerald-300">"3+ years"</span>,
+              </div>
+
               <div>{"}"}</div>
             </div>
           </div>
