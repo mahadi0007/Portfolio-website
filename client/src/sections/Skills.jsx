@@ -1,15 +1,31 @@
 const skillGroups = [
   {
-    title: "Frontend",
-    items: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS"],
+    title: "Programming Languages",
+    items: ["Python", "JavaScript", "C++", "Java"],
   },
   {
-    title: "Backend",
-    items: ["Node.js", "Express", "REST APIs"],
+    title: "Frameworks & Libraries",
+    items: ["TensorFlow", "PyTorch", "Keras", "SK-Learn", "React.js", "Next.js"],
   },
   {
-    title: "Tools",
-    items: ["Git", "GitHub", "VS Code", "Figma"],
+    title: "Automation & AI",
+    items: ["Machine Learning", "Deep Learning","Langchain", "RAG", "Selenium"],
+  },
+  {
+    title: "Data Analysis & Visualization",
+    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn",],
+  },
+  {
+    title: "Web & Mobile Development",
+    items: ["HTML", "CSS", "JavaScript", "Sementic Web", "Android studio"],
+  },
+  {
+    title: "Cloud & DevOps Tools",
+    items: ["Git", "CI/CD", "Azure"],
+  },
+  {
+    title: "APIs & Databases",
+    items: ["REST APIs", "GraphQL","MySQL","PL/SQL", "MongoDB",],
   },
 ]
 
@@ -21,7 +37,7 @@ export default function Skills() {
           Skills
         </p>
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Technologies I use to build modern web products.
+          Technologies I use to build modern web products and AI solutions.
         </h2>
       </div>
 

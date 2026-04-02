@@ -1,8 +1,14 @@
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import SectionReveal from "./components/SectionReveal"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
 import Skills from "./sections/Skills"
+import Experience from "./sections/Experience"
 import Projects from "./sections/Projects"
+import Education from "./sections/Education"
+import Research from "./sections/Research"
+import Achievements from "./sections/Achievements"
 import Contact from "./sections/Contact"
 
 export default function App() {
@@ -12,11 +18,17 @@ export default function App() {
 
       <main className="mx-auto max-w-6xl px-6">
         <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <SectionReveal><About /></SectionReveal>
+        <SectionReveal><Skills /></SectionReveal>
+        <SectionReveal><Experience /></SectionReveal>
+        <SectionReveal><Projects /></SectionReveal>
+        <SectionReveal><Education /></SectionReveal>
+        <SectionReveal><Research /></SectionReveal>
+        <SectionReveal><Achievements /></SectionReveal>
+        <SectionReveal><Contact /></SectionReveal>
       </main>
+
+      <Footer />
     </div>
   )
 }
