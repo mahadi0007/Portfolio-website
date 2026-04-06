@@ -5,7 +5,6 @@ import scraperImg from "../assets/projects/datascrapper.png"
 import chatbotImg from "../assets/projects/healthaibot.png"
 import healifyImg from "../assets/projects/healify.png"
 import esgImg from "../assets/projects/un.png"
-import embryoImg from "../assets/projects/embryo.png"
 import ProjectModal from "../components/ProjectModal"
 
 const projects = [
@@ -17,17 +16,17 @@ const projects = [
     image: healifyImg,
     live: "#",
     github: "#",
-    youtube: "#",
+    youtube: "https://www.youtube.com/watch?v=ngMlWDZ1SaQ",
   },
   {
-    title: "Multi-Agent Delivery System SPADE",
-    description:
-      "Python-based multi-agent delivery simulation system with rerouting and coordination capabilities using the SPADE framework and agent-based communication.",
-    tech: ["Python", "SPADE", "Multi-Agent Systems"],
-    image: multiAgentImg,
-    live: "#",
-    github: "#",
-    youtube: null,
+      title: "Multi-Agent Delivery System SPADE",
+      description:
+        "Python-based multi-agent delivery simulation system with rerouting and coordination capabilities using the SPADE framework and agent-based communication.",
+      tech: ["Python", "SPADE", "Multi-Agent Systems"],
+      image: multiAgentImg,
+      live: "#",
+      github: "https://github.com/mahadi0007/MultiAgentDeliverySystemSPADE",
+      youtube: null,
   },
   {
     title: "Sentiment Analysis",
@@ -36,19 +35,11 @@ const projects = [
     tech: ["Python", "Scikit-learn", "NLP"],
     image: sentimentImg,
     live: "#",
-    github: "#",
+    github: "https://github.com/mahadi0007/Sentinemnt-Analysis-MiniProject",
     youtube: null,
   },
-  {
-    title: "Data Scraper from Google Maps",
-    description:
-      "Automation tool for extracting business information from Google Maps using browser automation and structured data collection workflows.",
-    tech: ["Python", "Selenium", "BeautifulSoup"],
-    image: scraperImg,
-    live: "#",
-    github: "#",
-    youtube: null,
-  },
+
+
   {
     title: "Health AI Chatbot",
     description:
@@ -56,10 +47,10 @@ const projects = [
     tech: ["Python", "TensorFlow", "Chatbot"],
     image: chatbotImg,
     live: "#",
-    github: "#",
+    github: "https://github.com/mahadi0007/Health-AI-Chatbot",
     youtube: null,
   },
-  
+
   {
     title: "UN ESG START Platform",
     description:
@@ -70,16 +61,31 @@ const projects = [
     github: "#",
     youtube: null,
   },
+ 
   {
-    title: "AI-Based Embryo Classification",
-    description:
-      "Deep learning system for microscopy image analysis using U-Net, Mask R-CNN, and GAN-based approaches for embryo classification.",
-    tech: ["Python", "TensorFlow", "Deep Learning"],
-    image: embryoImg,
-    live: "#",
-    github: "#",
-    youtube: "#",
+      title: "Adignis",
+      description:
+        "An interactive review platform that provides insights and evaluations for individuals and businesses.",
+      tech: ["React.js", "Hooks", "Redux", "Middleware", "Webpack", "Caching", "GraphQL", "Chart.js", "Jenkins", "Nginx"],
+      image: esgImg,
+      live: "https://adignis.com/",
+      github: "#",
+      youtube: null,
   },
+
+  {
+      title: "Colonelsaab",
+      description:
+        "Developed a website for Colonelsaab restaurant, enhancing its online presence and boosting sales.",
+      tech: ["React.js", "Instagram API", "Hooks", "Redux"],
+      image: esgImg,
+      live: "https://colonelsaab.co.uk/",
+      github: "#",
+      youtube: null,
+    },
+
+
+
 ]
 
 export default function Projects() {
@@ -160,6 +166,8 @@ export default function Projects() {
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:scale-[1.03] hover:shadow-lg hover:shadow-cyan-400/30"
                 >
                   Live Demo
@@ -167,6 +175,8 @@ export default function Projects() {
 
                 <a
                   href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-xl border border-white/15 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400 hover:shadow-md"
                 >
                   GitHub
@@ -188,12 +198,12 @@ export default function Projects() {
         ))}
       </div>
 
-      {selectedProject && (
+     {selectedProject && (
         <ProjectModal
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
         />
-      )}
+      )}  
     </section>
   )
 }
