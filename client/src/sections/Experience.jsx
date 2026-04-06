@@ -1,4 +1,16 @@
 const experiences = [
+    {
+    role: "AI Training Specialist",
+    company: "Outlier · Contract",
+    location: "San Francisco (Remote)",
+    period: "Feb 2025 – Present",
+    points: [
+      "Collaborate with leading AI organizations to optimize Large Language Models (LLMs) through Reinforcement Learning from Human Feedback (RLHF).",
+      "Evaluate AI outputs for accuracy, logic, and safety based on rigorous quality rubrics.",
+      "Develop complex prompts and diverse datasets to train generative AI models in specialized domains.",
+      "Perform rigorous fact-checking and technical reviews to identify and mitigate model hallucinations and inconsistencies.",
+    ],
+  },
   {
     role: "Frontend (React.js) Developer",
     company: "SegWitz Sdn. Bhd.",
@@ -26,6 +38,26 @@ const experiences = [
     company: "Teresa Startup",
     location: "Dhaka, Bangladesh",
     period: "Jul 2021 – Jan 2022",
+    points: [
+      'Developed the "Smart Nurse System," an innovative digital healthcare system.',
+      "Contributed to a project that secured government funding, demonstrating real-world business value.",
+    ],
+  },
+  {
+    role: "Trainee",
+    company: "B-JET · Full-time",
+    location: "Miyazaki, Japan (Remote)",
+    period: "Apr 2022 – Sep 2022",
+    points: [
+      'Developed the "Smart Nurse System," an innovative digital healthcare system.',
+      "Contributed to a project that secured government funding, demonstrating real-world business value.",
+    ],
+  },
+    {
+    role: "GMS Specialist",
+    company: "BAT · Full-time",
+    location: "Dhaka, Bangladesh",
+    period: "Feb 2022 – Apr 2022",
     points: [
       'Developed the "Smart Nurse System," an innovative digital healthcare system.',
       "Contributed to a project that secured government funding, demonstrating real-world business value.",

@@ -13,6 +13,20 @@ const education = [
     details:
       "Built a strong academic foundation in computer science, software engineering, algorithms, and application development.",
   },
+    {
+    degree: "HSC in Science",
+    institution: "Cantonment Public School and College, Rangpur",
+    period: "Aug 2014 – Jun 2016",
+    details:
+      "Currently pursuing advanced studies in artificial intelligence, intelligent systems, and applied machine learning in Finland.",
+  },
+    {
+    degree: "SSC in Science",
+    institution: "Cantonment Public School and College, Rangpur",
+    period: "Aug 2012 – Jun 2014",
+    details:
+      "Currently pursuing advanced studies in artificial intelligence, intelligent systems, and applied machine learning in Finland.",
+  },
 ]
 
 export default function Education() {

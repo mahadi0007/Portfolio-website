@@ -10,6 +10,16 @@ import ProjectModal from "../components/ProjectModal"
 
 const projects = [
   {
+    title: "Healify – AI Physiotherapy Assistant",
+    description:
+      "AI-powered healthcare platform integrating LLM + RAG with real-time computer vision for exercise tracking and posture analysis.",
+    tech: ["React", "FastAPI", "MongoDB", "WebSockets", "Azure"],
+    image: healifyImg,
+    live: "#",
+    github: "#",
+    youtube: "#",
+  },
+  {
     title: "Multi-Agent Delivery System SPADE",
     description:
       "Python-based multi-agent delivery simulation system with rerouting and coordination capabilities using the SPADE framework and agent-based communication.",
@@ -49,16 +59,7 @@ const projects = [
     github: "#",
     youtube: null,
   },
-  {
-    title: "Healify – AI Physiotherapy Assistant",
-    description:
-      "AI-powered healthcare platform integrating LLM + RAG with real-time computer vision for exercise tracking and posture analysis.",
-    tech: ["React", "FastAPI", "MongoDB", "WebSockets", "Azure"],
-    image: healifyImg,
-    live: "#",
-    github: "#",
-    youtube: "#",
-  },
+  
   {
     title: "UN ESG START Platform",
     description:
