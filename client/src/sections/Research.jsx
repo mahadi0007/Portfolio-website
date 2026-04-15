@@ -18,9 +18,6 @@ export default function Research() {
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
           Research
         </p>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          Research work in NLP and sentiment analysis.
-        </h2>
       </div>
 
       <div className="grid gap-6">
