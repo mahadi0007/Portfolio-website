@@ -33,11 +33,12 @@ export default function Education() {
   return (
     <section id="education" className="py-24">
       <div className="mb-12">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500 dark:text-cyan-400">
           Education
         </p>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          Academic background supporting my work in AI, machine learning, and software engineering.
+        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+          Academic background supporting my work in AI, machine learning, and
+          software engineering.
         </h2>
       </div>
 
@@ -45,14 +46,20 @@ export default function Education() {
         {education.map((item) => (
           <article
             key={`${item.degree}-${item.period}`}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400/40"
+            className="rounded-3xl border border-slate-200 bg-white/80 p-6 transition hover:border-cyan-500/40 dark:border-white/10 dark:bg-white/5 dark:hover:border-cyan-400/40"
           >
-            <p className="text-sm text-cyan-400">{item.period}</p>
-            <h3 className="mt-3 text-xl font-semibold text-white">
+            <p className="text-sm text-cyan-500 dark:text-cyan-400">
+              {item.period}
+            </p>
+            <h3 className="mt-3 text-xl font-semibold text-slate-900 dark:text-white">
               {item.degree}
             </h3>
-            <p className="mt-2 text-slate-300">{item.institution}</p>
-            <p className="mt-4 leading-7 text-slate-400">{item.details}</p>
+            <p className="mt-2 text-slate-700 dark:text-slate-300">
+              {item.institution}
+            </p>
+            <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              {item.details}
+            </p>
           </article>
         ))}
       </div>
