@@ -73,7 +73,7 @@ export default function Experience() {
           Experience
         </p>
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Professional experience building impactful digital products.
+          Professional experience across AI training, intelligent systems, and product engineering.
         </h2>
       </div>
 

@@ -2,12 +2,12 @@ const researchItems = [
   {
     title:
       "Sentiment Analysis from Bengali Social Media Posts Using Hybridized Feature Extraction Approach",
-    link: "#",
+    link: "https://ieeexplore.ieee.org/document/9873668",
   },
   {
     title:
       "Bengali Social Media Post Sentiment Analysis Using Deep Learning and BERT Model",
-    link: "#",
+    link: "https://ieeexplore.ieee.org/document/9873680",
   },
 ]
 

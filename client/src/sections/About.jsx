@@ -10,30 +10,21 @@ export default function About() {
           </p>
 
           <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
-            Frontend developer with a strong foundation in AI, research, and scalable product development.
+            AI/ML Engineer and AI Researcher building practical intelligent systems for real-world impact.
           </h2>
 
           <div className="mt-6 space-y-5 text-slate-400 leading-7">
             <p>
-              I’m Md Mahadi Hasan, a developer with 3+ years of professional
-              experience building modern web applications, dashboards, and
-              data-driven interfaces. My work focuses on creating responsive,
-              user-friendly products with clean architecture and strong visual quality.
-            </p>
+              I’m Md Mahadi Hasan, an AI/ML Engineer and AI Researcher with experience in machine learning, natural language processing, large language model applications, and intelligent product development. My work focuses on building practical AI systems that are scalable, useful, and grounded in real-world needs.
+              </p>
 
             <p>
-              Alongside frontend engineering, I have experience working with
-              artificial intelligence, machine learning, computer vision, and
-              automation. This combination helps me approach products from both
-              the user experience side and the technical problem-solving side.
-            </p>
+              I have worked across AI training, data-driven platforms, web applications, and research-oriented projects, which helps me connect model behavior, product usability, and deployment realities. I enjoy solving problems that sit at the intersection of research, engineering, and user impact.
+              </p>
 
             <p>
-              I’m currently pursuing an MSc in Artificial Intelligence at the
-              University of Jyväskylä in Finland, where I’m continuing to deepen
-              my expertise in intelligent systems, applied AI, and real-world
-              software development.
-            </p>
+             I’m currently pursuing an MSc in Artificial Intelligence at the University of Jyväskylä in Finland, where I continue to deepen my expertise in intelligent systems, applied machine learning, and AI research.
+             </p>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -41,7 +32,10 @@ export default function About() {
               3+ Years Experience
             </span>
             <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
-              MSc in AI
+              AI/ML Engineer
+            </span>
+            <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
+              MSc in Artificial Intelligence
             </span>
             <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
               Based in Finland

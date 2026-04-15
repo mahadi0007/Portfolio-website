@@ -13,19 +13,19 @@ const education = [
     details:
       "Built a strong academic foundation in computer science, software engineering, algorithms, and application development.",
   },
-    {
-    degree: "HSC in Science",
+  {
+    degree: "Higher School Certificate",
     institution: "Cantonment Public School and College, Rangpur",
     period: "Aug 2014 – Jun 2016",
     details:
-      "Currently pursuing advanced studies in artificial intelligence, intelligent systems, and applied machine learning in Finland.",
+      "Completed higher secondary education with emphasis on mathematics, physics, and analytical problem-solving.",
   },
-    {
-    degree: "SSC in Science",
+  {
+    degree: "Secondary School Certificate",
     institution: "Cantonment Public School and College, Rangpur",
     period: "Aug 2012 – Jun 2014",
     details:
-      "Currently pursuing advanced studies in artificial intelligence, intelligent systems, and applied machine learning in Finland.",
+      "Completed secondary education, building a strong foundation for later study in engineering and computing.",
   },
 ]
 
@@ -37,7 +37,7 @@ export default function Education() {
           Education
         </p>
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Academic background supporting software and AI expertise.
+          Academic background supporting my work in AI, machine learning, and software engineering.
         </h2>
       </div>
 

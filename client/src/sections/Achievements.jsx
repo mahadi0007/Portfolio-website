@@ -2,12 +2,12 @@ const achievements = [
   {
     title: "Devpost Postman Hackathon",
     description:
-      "Secured 72nd place among 1875 participants worldwide for developing a Fake News Detector.",
+      "Placed 72nd among 1,875 participants worldwide in the Devpost Postman Hackathon for developing a Fake News Detector.",
   },
   {
     title: "B-JET (Bangladesh Japan ICT Engineers’ Training Program) – 2022",
     description:
-      "Acquired foundational Japanese language skills along with knowledge of technologies and business etiquette.",
+      "Completed technical training under the B-JET program, gaining foundational Japanese language skills, exposure to relevant technologies, and professional business etiquette.",
   },
 ]
 
@@ -19,8 +19,13 @@ export default function Achievements() {
           Achievements
         </p>
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Recognition, training, and milestones.
+          Recognition, technical training, and notable milestones.
         </h2>
+        <p className="mt-4 max-w-3xl leading-7 text-slate-400">
+          A selection of recognitions, competitive achievements, and technical
+          training experiences that have shaped my development in AI,
+          engineering, and professional growth.
+        </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">

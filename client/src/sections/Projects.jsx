@@ -1,95 +1,12 @@
 import { useState } from "react"
-import multiAgentImg from "../assets/projects/spade.png"
-import sentimentImg from "../assets/projects/sentiment.png"
-import scraperImg from "../assets/projects/datascrapper.png"
-import chatbotImg from "../assets/projects/healthaibot.png"
-import healifyImg from "../assets/projects/healify.png"
-import esgImg from "../assets/projects/un.png"
+import { Link } from "react-router-dom"
+import { projects } from "../data/projects"
 import ProjectModal from "../components/ProjectModal"
-
-const projects = [
-  {
-    title: "Healify – AI Physiotherapy Assistant",
-    description:
-      "AI-powered healthcare platform integrating LLM + RAG with real-time computer vision for exercise tracking and posture analysis.",
-    tech: ["React", "FastAPI", "MongoDB", "WebSockets", "Azure"],
-    image: healifyImg,
-    live: "#",
-    github: "#",
-    youtube: "https://www.youtube.com/watch?v=ngMlWDZ1SaQ",
-  },
-  {
-      title: "Multi-Agent Delivery System SPADE",
-      description:
-        "Python-based multi-agent delivery simulation system with rerouting and coordination capabilities using the SPADE framework and agent-based communication.",
-      tech: ["Python", "SPADE", "Multi-Agent Systems"],
-      image: multiAgentImg,
-      live: "#",
-      github: "https://github.com/mahadi0007/MultiAgentDeliverySystemSPADE",
-      youtube: null,
-  },
-  {
-    title: "Sentiment Analysis",
-    description:
-      "Sentiment analysis project focused on classifying social media text using NLP and machine learning techniques for opinion mining and language understanding.",
-    tech: ["Python", "Scikit-learn", "NLP"],
-    image: sentimentImg,
-    live: "#",
-    github: "https://github.com/mahadi0007/Sentinemnt-Analysis-MiniProject",
-    youtube: null,
-  },
-
-
-  {
-    title: "Health AI Chatbot",
-    description:
-      "Healthcare-focused AI chatbot designed to assist users with symptom guidance, health-related interactions, and intelligent conversational support.",
-    tech: ["Python", "TensorFlow", "Chatbot"],
-    image: chatbotImg,
-    live: "#",
-    github: "https://github.com/mahadi0007/Health-AI-Chatbot",
-    youtube: null,
-  },
-
-  {
-    title: "UN ESG START Platform",
-    description:
-      "Developed for the United Nations in Malaysia, supporting companies including Petronas with localization, dashboard workflows, and dynamic PDF generation.",
-    tech: ["React", "REST API", "CI/CD", "React-chartjs2"],
-    image: esgImg,
-    live: "#",
-    github: "#",
-    youtube: null,
-  },
- 
-  {
-      title: "Adignis",
-      description:
-        "An interactive review platform that provides insights and evaluations for individuals and businesses.",
-      tech: ["React.js", "Hooks", "Redux", "Middleware", "Webpack", "Caching", "GraphQL", "Chart.js", "Jenkins", "Nginx"],
-      image: esgImg,
-      live: "https://adignis.com/",
-      github: "#",
-      youtube: null,
-  },
-
-  {
-      title: "Colonelsaab",
-      description:
-        "Developed a website for Colonelsaab restaurant, enhancing its online presence and boosting sales.",
-      tech: ["React.js", "Instagram API", "Hooks", "Redux"],
-      image: esgImg,
-      live: "https://colonelsaab.co.uk/",
-      github: "#",
-      youtube: null,
-    },
-
-
-
-]
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null)
+
+  const featuredProjects = projects.filter((project) => project.featured)
 
   return (
     <section id="projects" className="py-24">
@@ -99,22 +16,21 @@ export default function Projects() {
             Featured Work
           </p>
           <h2 className="text-3xl font-bold sm:text-4xl">
-            Selected projects showcasing AI, full-stack systems, and real-world
-            problem solving.
+            Selected projects showcasing AI, research, and real-world product
+            development.
           </h2>
         </div>
 
         <p className="max-w-xl text-slate-400">
-          A selection of projects focused on clean UI, responsive layouts,
-          reusable components, and practical development workflows.
+          A curated selection of projects across AI/ML, intelligent systems,
+          and modern web development.
         </p>
       </div>
 
       <div className="grid gap-8">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <article
             key={project.title}
-            style={{ transitionDelay: `${Math.random() * 0.1}s` }}
             className="group grid gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-white/[0.07] hover:shadow-xl hover:shadow-cyan-500/10 lg:grid-cols-[1.2fr_0.8fr]"
           >
             <div className="rounded-2xl border border-white/10 bg-slate-900/80 p-4">
@@ -136,6 +52,17 @@ export default function Projects() {
 
             <div className="flex flex-col justify-between">
               <div>
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  {project.categories.map((category) => (
+                    <span
+                      key={category}
+                      className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-cyan-300"
+                    >
+                      {category}
+                    </span>
+                  ))}
+                </div>
+
                 <h3 className="text-2xl font-semibold leading-snug transition group-hover:text-cyan-400">
                   {project.title}
                 </h3>
@@ -164,23 +91,27 @@ export default function Projects() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:scale-[1.03] hover:shadow-lg hover:shadow-cyan-400/30"
-                >
-                  Live Demo
-                </a>
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:scale-[1.03] hover:shadow-lg hover:shadow-cyan-400/30"
+                  >
+                    Live Demo
+                  </a>
+                )}
 
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-xl border border-white/15 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400 hover:shadow-md"
-                >
-                  GitHub
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-xl border border-white/15 px-5 py-3 font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-400 hover:shadow-md"
+                  >
+                    GitHub
+                  </a>
+                )}
 
                 {project.youtube && (
                   <a
@@ -198,12 +129,21 @@ export default function Projects() {
         ))}
       </div>
 
-     {selectedProject && (
+      <div className="mt-12 flex justify-center">
+        <Link
+          to="/projects"
+          className="rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-300 transition hover:border-cyan-400 hover:bg-cyan-400/20"
+        >
+          Explore All Projects
+        </Link>
+      </div>
+
+      {selectedProject && (
         <ProjectModal
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
         />
-      )}  
+      )}
     </section>
   )
 }

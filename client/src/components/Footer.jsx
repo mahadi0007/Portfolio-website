@@ -5,12 +5,12 @@ import {
   FaFacebook,
   FaEnvelope,
 } from "react-icons/fa"
-import { SiGooglescholar } from "react-icons/si"
+import { SiResearchgate } from "react-icons/si"
 
 const socialLinks = [
   {
     name: "Email",
-    href: "mailto:mahadiaustcse39@gmail.com",
+    href: "mailto:mahadiaustcse39@gmail.com?subject=Portfolio%20Contact",
     icon: FaEnvelope,
   },
   {
@@ -24,9 +24,9 @@ const socialLinks = [
     icon: FaGithub,
   },
   {
-    name: "Google Scholar",
-    href: "#",
-    icon: SiGooglescholar,
+    name: "ResearchGate",
+    href: "https://www.researchgate.net/profile/Md-Mahadi-Hasan-11",
+    icon: SiResearchgate,
   },
   {
     name: "Instagram",
@@ -51,9 +51,9 @@ export default function Footer() {
             </h3>
 
             <p className="mt-4 max-w-sm leading-7 text-slate-400">
-              Frontend developer, AI-focused engineer, and researcher building
-              modern digital products with strong UI, scalable systems, and
-              practical impact.
+              AI/ML Engineer and AI Researcher building intelligent systems,
+              applied machine learning solutions, and production-ready web
+              applications with real-world impact.
             </p>
           </div>
 
@@ -82,6 +82,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
               Connect
             </h4>
+
+            <p className="mt-2 text-sm text-slate-400">
+              Find me on these platforms
+            </p>
 
             <div className="mt-4 flex flex-wrap gap-4">
               {socialLinks.map((item) => {
@@ -126,7 +130,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>© 2026 Md Mahadi Hasan. All rights reserved.</p>
-          <p>Based in Finland</p>
+          <p>Based in Finland • Open to AI/ML & Software Opportunities</p>
         </div>
       </div>
     </footer>
