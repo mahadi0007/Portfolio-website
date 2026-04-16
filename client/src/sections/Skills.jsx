@@ -45,7 +45,7 @@ export default function Skills() {
         </p>
         <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
           Technologies I use to build intelligent systems, AI products,
-          research-driven applications, and modern web experiences.
+          research-driven applications, and modern web experiences
         </h2>
       </div>
 

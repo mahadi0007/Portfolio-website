@@ -17,7 +17,7 @@ export default function Projects() {
           </p>
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             A curated selection of projects across AI/ML, intelligent systems,
-          and modern web development.
+          and modern web development
           </h2>
         </div>
 

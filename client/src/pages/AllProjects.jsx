@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa"
 import { projects } from "../data/projects"
 import ProjectModal from "../components/ProjectModal"
 
-const filters = ["All", "AI/ML", "Web Development", "Research"]
+const filters = ["All", "AI/ML", "Web Development"]
 
 export default function AllProjects() {
   const [selectedProject, setSelectedProject] = useState(null)

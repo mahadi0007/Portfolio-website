@@ -24,11 +24,15 @@ export default function About() {
             </p>
 
             <p>
-              I have worked across AI training, data-driven platforms, web
-              applications, and research-oriented projects, which helps me
-              connect model behavior, product usability, and deployment
-              realities. I enjoy solving problems that sit at the intersection
-              of research, engineering, and user impact.
+              <p>
+            <p>
+            Alongside my AI work, I have over 3+ years of professional experience in
+            web development, building scalable, data-driven applications using modern
+            technologies like React.js and Next.js. I focus on bridging AI systems with
+            real-world products, ensuring solutions are both technically robust and
+            practical for users.
+          </p>
+                    </p>
             </p>
 
             <p>
