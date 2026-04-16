@@ -5,54 +5,65 @@ export default function About() {
     <section id="about" className="py-24">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500 dark:text-cyan-400">
             About
           </p>
 
-          <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
-            Frontend developer with a strong foundation in AI, research, and scalable product development.
+          <h2 className="text-3xl font-bold leading-tight text-slate-900 sm:text-4xl dark:text-white">
+            AI/ML Engineer and AI Researcher building practical intelligent
+            systems for real-world impact.
           </h2>
 
-          <div className="mt-6 space-y-5 text-slate-400 leading-7">
+          <div className="mt-6 space-y-5 leading-7 text-slate-600 dark:text-slate-400">
             <p>
-              I’m Md Mahadi Hasan, a developer with 3+ years of professional
-              experience building modern web applications, dashboards, and
-              data-driven interfaces. My work focuses on creating responsive,
-              user-friendly products with clean architecture and strong visual quality.
+              I’m Md Mahadi Hasan, an AI/ML Engineer and AI Researcher with
+              experience in machine learning, natural language processing, large
+              language model applications, and intelligent product development.
+              My work focuses on building practical AI systems that are
+              scalable, useful, and grounded in real-world needs.
             </p>
 
             <p>
-              Alongside frontend engineering, I have experience working with
-              artificial intelligence, machine learning, computer vision, and
-              automation. This combination helps me approach products from both
-              the user experience side and the technical problem-solving side.
+              <p>
+            <p>
+            Alongside my AI work, I have over 3+ years of professional experience in
+            web development, building scalable, data-driven applications using modern
+            technologies like React.js and Next.js. I focus on bridging AI systems with
+            real-world products, ensuring solutions are both technically robust and
+            practical for users.
+          </p>
+                    </p>
             </p>
 
             <p>
               I’m currently pursuing an MSc in Artificial Intelligence at the
-              University of Jyväskylä in Finland, where I’m continuing to deepen
-              my expertise in intelligent systems, applied AI, and real-world
-              software development.
+              University of Jyväskylä in Finland, where I continue to deepen my
+              expertise in intelligent systems, applied machine learning, and AI
+              research.
             </p>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
-              3+ Years Experience
-            </span>
-            <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
-              MSc in AI
-            </span>
-            <span className="rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300">
-              Based in Finland
-            </span>
+            {[
+              "3+ Years Experience",
+              "AI/ML Engineer",
+              "MSc in Artificial Intelligence",
+              "Based in Finland",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-slate-200 px-4 py-2 text-sm text-slate-700 dark:border-white/10 dark:text-slate-300"
+              >
+                {item}
+              </span>
+            ))}
           </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-md">
           <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-cyan-500/10 blur-2xl" />
 
-          <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3 shadow-2xl shadow-cyan-500/10 backdrop-blur">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-3 shadow-2xl shadow-cyan-500/10 backdrop-blur dark:border-white/10 dark:bg-white/5">
             <img
               src={profileImg}
               alt="Md Mahadi Hasan"

@@ -1,5 +1,5 @@
 const experiences = [
-    {
+  {
     role: "AI Training Specialist",
     company: "Outlier · Contract",
     location: "San Francisco (Remote)",
@@ -53,7 +53,7 @@ const experiences = [
       "Contributed to a project that secured government funding, demonstrating real-world business value.",
     ],
   },
-    {
+  {
     role: "GMS Specialist",
     company: "BAT · Full-time",
     location: "Dhaka, Bangladesh",
@@ -69,11 +69,12 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24">
       <div className="mb-12">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-500 dark:text-cyan-400">
           Experience
         </p>
-        <h2 className="text-3xl font-bold sm:text-4xl">
-          Professional experience building impactful digital products.
+        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
+          Professional experience across AI training, intelligent systems, and
+          web development
         </h2>
       </div>
 
@@ -81,27 +82,30 @@ export default function Experience() {
         {experiences.map((item) => (
           <article
             key={`${item.company}-${item.period}`}
-            className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:border-cyan-400/40"
+            className="rounded-3xl border border-slate-200 bg-white/80 p-6 transition hover:border-cyan-500/40 dark:border-white/10 dark:bg-white/5 dark:hover:border-cyan-400/40"
           >
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
               <div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
                   {item.role}
                 </h3>
-                <p className="mt-1 text-slate-300">
-                  {item.company} <span className="text-slate-500">• {item.location}</span>
+                <p className="mt-1 text-slate-700 dark:text-slate-300">
+                  {item.company}{" "}
+                  <span className="text-slate-500 dark:text-slate-500">
+                    • {item.location}
+                  </span>
                 </p>
               </div>
 
-              <p className="text-sm text-slate-400 md:text-right">
+              <p className="text-sm text-slate-500 md:text-right dark:text-slate-400">
                 {item.period}
               </p>
             </div>
 
-            <ul className="mt-5 space-y-3 text-slate-400">
+            <ul className="mt-5 space-y-3 text-slate-600 dark:text-slate-400">
               {item.points.map((point) => (
                 <li key={point} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-cyan-400" />
+                  <span className="mt-2 h-2 w-2 rounded-full bg-cyan-500 dark:bg-cyan-400" />
                   <span>{point}</span>
                 </li>
               ))}
