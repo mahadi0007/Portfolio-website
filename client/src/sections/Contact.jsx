@@ -25,7 +25,7 @@ export default function Contact() {
           </p>
 
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
-            Let’s build something meaningful with AI.
+            Let’s build something meaningful together.
           </h2>
 
           <p className="mt-4 max-w-lg leading-7 text-slate-600 dark:text-slate-400">

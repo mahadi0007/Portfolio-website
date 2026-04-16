@@ -16,15 +16,12 @@ export default function Projects() {
             Featured Work
           </p>
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
-            Selected projects showcasing AI, research, and real-world product
-            development.
+            A curated selection of projects across AI/ML, intelligent systems,
+          and modern web development.
           </h2>
         </div>
 
-        <p className="max-w-xl text-slate-600 dark:text-slate-400">
-          A curated selection of projects across AI/ML, intelligent systems,
-          and modern web development.
-        </p>
+    
       </div>
 
       <div className="grid gap-8">

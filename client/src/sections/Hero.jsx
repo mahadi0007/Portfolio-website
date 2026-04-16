@@ -23,9 +23,9 @@ export default function Hero() {
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-400">
             I’m an AI/ML Engineer and AI Researcher with experience in machine
             learning, NLP, intelligent systems, and applied product
-            development. Alongside my AI work, I also build modern web
-            applications and user-facing systems that help turn research ideas
-            into usable products.
+            development. Alongside my AI work, I also have 3+ years of  professional experience
+            building modern web applications and user-facing systems that help turn
+            research ideas into usable products.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

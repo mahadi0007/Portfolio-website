@@ -74,7 +74,7 @@ export default function Experience() {
         </p>
         <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
           Professional experience across AI training, intelligent systems, and
-          product engineering.
+          web development.
         </h2>
       </div>
 

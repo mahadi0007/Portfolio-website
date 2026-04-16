@@ -31,14 +31,10 @@ export default function AllProjects() {
               </p>
 
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-                A complete view of my AI/ML, research, and web development work.
+                A complete view of my work.
               </h1>
 
-              <p className="mt-5 max-w-2xl leading-7 text-slate-600 dark:text-slate-400">
-                This page includes featured and additional projects spanning
-                intelligent systems, machine learning, research-oriented
-                experimentation, and production-ready web applications.
-              </p>
+            
             </div>
 
             <div className="flex flex-wrap gap-3">

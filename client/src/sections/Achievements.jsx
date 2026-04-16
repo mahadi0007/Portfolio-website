@@ -21,11 +21,7 @@ export default function Achievements() {
         <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
           Recognition, technical training, and notable milestones.
         </h2>
-        <p className="mt-4 max-w-3xl leading-7 text-slate-600 dark:text-slate-400">
-          A selection of recognitions, competitive achievements, and technical
-          training experiences that have shaped my development in AI,
-          engineering, and professional growth.
-        </p>
+        
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
