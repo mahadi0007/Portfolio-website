@@ -38,14 +38,6 @@ export default function AllProjects() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <Link
-                to="/"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:border-cyan-500 hover:text-cyan-500 dark:border-white/15 dark:bg-transparent dark:text-white dark:hover:border-cyan-400 dark:hover:text-cyan-400"
-              >
-                <FaArrowLeft className="text-sm" />
-                Back Home
-              </Link>
-
               <a
                 href={mailtoLink}
                 className="rounded-xl bg-cyan-500 px-5 py-3 font-semibold text-white transition hover:scale-[1.02] dark:bg-cyan-400 dark:text-slate-950"

@@ -1,20 +1,21 @@
 import { useEffect, useRef, useState } from "react"
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import ThemeToggle from "./ThemeToggle"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Research", href: "#research" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "home" },
+  { name: "About", href: "about" },
+  { name: "Experience", href: "experience" },
+  { name: "Projects", href: "projects" },
+  { name: "Research", href: "research" },
+  { name: "Contact", href: "contact" },
 ]
 
 const expertiseLinks = [
-  { name: "Skills", href: "#skills" },
-  { name: "Education", href: "#education" },
-  { name: "Achievements", href: "#achievements" },
+  { name: "Skills", href: "skills" },
+  { name: "Education", href: "education" },
+  { name: "Achievements", href: "achievements" },
 ]
 
 export default function Navbar() {
@@ -22,8 +23,15 @@ export default function Navbar() {
   const [expertiseOpen, setExpertiseOpen] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
   const dropdownRef = useRef(null)
+  const location = useLocation()
+  const navigate = useNavigate()
 
+  // Handle intersection observer or scroll logic
   useEffect(() => {
+    if (location.pathname !== "/") {
+      setActiveSection("")
+      return
+    }
     const handleScroll = () => {
       const sections = [
         "home",
@@ -68,36 +76,81 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll)
       document.removeEventListener("mousedown", handleClickOutside)
     }
-  }, [])
+  }, [location.pathname])
 
   const isExpertiseActive = ["skills", "education", "achievements"].includes(
     activeSection
   )
 
-  const handleNavClick = () => {
+  const scrollToSection = (sectionId) => {
     setMobileOpen(false)
     setExpertiseOpen(false)
+
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } })
+    } else {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const offset = 80 // Navbar height
+        const bodyRect = document.body.getBoundingClientRect().top
+        const elementRect = element.getBoundingClientRect().top
+        const elementPosition = elementRect - bodyRect
+        const offsetPosition = elementPosition - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        })
+      }
+    }
   }
+
+  // Effect to handle scrolling when coming from another page
+  useEffect(() => {
+    if (location.pathname === "/" && location.state?.scrollTo) {
+      const sectionId = location.state.scrollTo
+      // Clear state to avoid scrolling again on reload
+      navigate(location.pathname, { replace: true, state: {} })
+
+      // Small timeout to ensure DOM is ready
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          const offset = 80
+          const bodyRect = document.body.getBoundingClientRect().top
+          const elementRect = element.getBoundingClientRect().top
+          const elementPosition = elementRect - bodyRect
+          const offsetPosition = elementPosition - offset
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          })
+        }
+      }, 100)
+    }
+  }, [location, navigate])
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/80 shadow-sm shadow-slate-200/50 dark:shadow-none">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a
-          href="#home"
+        <Link
+          to="/"
+          onClick={() => scrollToSection("home")}
           className="text-xl font-bold tracking-tight text-slate-900 transition hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400"
         >
           Md Mahadi <span className="text-cyan-500 dark:text-cyan-400">Hasan</span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-6 md:flex">
           <nav className="flex items-center gap-8">
             {navLinks.slice(0, 2).map((link) => {
-              const isActive = activeSection === link.href.slice(1)
+              const isActive = activeSection === link.href
 
               return (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
+                  onClick={() => scrollToSection(link.href)}
                   className={`text-sm font-medium transition ${
                     isActive
                       ? "text-cyan-500 dark:text-cyan-400"
@@ -105,7 +158,7 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
-                </a>
+                </button>
               )
             })}
 
@@ -130,21 +183,20 @@ export default function Navbar() {
               {expertiseOpen && (
                 <div className="absolute left-0 top-full mt-3 w-52 rounded-2xl border border-slate-200/70 bg-white/95 p-2 shadow-2xl backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/95 dark:shadow-cyan-500/10">
                   {expertiseLinks.map((link) => {
-                    const isActive = activeSection === link.href.slice(1)
+                    const isActive = activeSection === link.href
 
                     return (
-                      <a
+                      <button
                         key={link.name}
-                        href={link.href}
-                        onClick={handleNavClick}
-                        className={`block rounded-xl px-4 py-3 text-sm transition ${
+                        onClick={() => scrollToSection(link.href)}
+                        className={`block w-full text-left rounded-xl px-4 py-3 text-sm transition ${
                           isActive
                             ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                             : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
                         }`}
                       >
                         {link.name}
-                      </a>
+                      </button>
                     )
                   })}
                 </div>
@@ -152,12 +204,12 @@ export default function Navbar() {
             </div>
 
             {navLinks.slice(2).map((link) => {
-              const isActive = activeSection === link.href.slice(1)
+              const isActive = activeSection === link.href
 
               return (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
+                  onClick={() => scrollToSection(link.href)}
                   className={`text-sm font-medium transition ${
                     isActive
                       ? "text-cyan-500 dark:text-cyan-400"
@@ -165,7 +217,7 @@ export default function Navbar() {
                   }`}
                 >
                   {link.name}
-                </a>
+                </button>
               )
             })}
           </nav>
@@ -190,29 +242,27 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="border-t border-slate-200/70 bg-white/95 px-6 py-4 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/95 md:hidden">
           <div className="flex flex-col gap-3">
-            <a
-              href="#home"
-              onClick={handleNavClick}
-              className={`rounded-xl px-4 py-3 text-sm font-medium transition ${
+            <button
+              onClick={() => scrollToSection("home")}
+              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
                 activeSection === "home"
                   ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                   : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
               }`}
             >
               Home
-            </a>
+            </button>
 
-            <a
-              href="#about"
-              onClick={handleNavClick}
-              className={`rounded-xl px-4 py-3 text-sm font-medium transition ${
+            <button
+              onClick={() => scrollToSection("about")}
+              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
                 activeSection === "about"
                   ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                   : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
               }`}
             >
               About
-            </a>
+            </button>
 
             <div className="rounded-2xl border border-slate-200 bg-slate-100/50 p-2 dark:border-white/10 dark:bg-white/[0.03]">
               <button
@@ -235,21 +285,20 @@ export default function Navbar() {
               {expertiseOpen && (
                 <div className="mt-2 flex flex-col gap-2">
                   {expertiseLinks.map((link) => {
-                    const isActive = activeSection === link.href.slice(1)
+                    const isActive = activeSection === link.href
 
                     return (
-                      <a
+                      <button
                         key={link.name}
-                        href={link.href}
-                        onClick={handleNavClick}
-                        className={`rounded-xl px-4 py-3 text-sm transition ${
+                        onClick={() => scrollToSection(link.href)}
+                        className={`text-left rounded-xl px-4 py-3 text-sm transition ${
                           isActive
                             ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                             : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
                         }`}
                       >
                         {link.name}
-                      </a>
+                      </button>
                     )
                   })}
                 </div>
@@ -257,21 +306,20 @@ export default function Navbar() {
             </div>
 
             {navLinks.slice(2).map((link) => {
-              const isActive = activeSection === link.href.slice(1)
+              const isActive = activeSection === link.href
 
               return (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={handleNavClick}
-                  className={`rounded-xl px-4 py-3 text-sm font-medium transition ${
+                  onClick={() => scrollToSection(link.href)}
+                  className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
                     isActive
                       ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                       : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
                   }`}
                 >
                   {link.name}
-                </a>
+                </button>
               )
             })}
           </div>

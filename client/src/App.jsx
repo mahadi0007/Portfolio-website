@@ -13,20 +13,16 @@ import SectionReveal from "./components/SectionReveal"
 
 export default function App() {
   return (
-    <div className="min-h-screen text-slate-900 dark:text-white">
-      <Navbar />
-      <main className="mx-auto max-w-6xl px-6">
-        <Hero />
-        <SectionReveal><About /></SectionReveal>
-        <SectionReveal><Skills /></SectionReveal>
-        <SectionReveal><Experience /></SectionReveal>
-        <SectionReveal><Projects /></SectionReveal>
-        <SectionReveal><Research /></SectionReveal>
-        <SectionReveal><Education /></SectionReveal>
-        <SectionReveal><Achievements /></SectionReveal>
-        <SectionReveal><Contact /></SectionReveal>
-      </main>
-      <Footer />
-    </div>
+    <main className="mx-auto max-w-6xl px-6">
+      <Hero />
+      <SectionReveal><About /></SectionReveal>
+      <SectionReveal><Skills /></SectionReveal>
+      <SectionReveal><Experience /></SectionReveal>
+      <SectionReveal><Projects /></SectionReveal>
+      <SectionReveal><Research /></SectionReveal>
+      <SectionReveal><Education /></SectionReveal>
+      <SectionReveal><Achievements /></SectionReveal>
+      <SectionReveal><Contact /></SectionReveal>
+    </main>
   )
 }
