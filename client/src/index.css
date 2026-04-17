@@ -1,18 +1,29 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  /* Change the color here to update the entire light theme! */
+  --bg-main: rgb(141 187 233 / 50%);
+  /* slate-100 */
+  /* --bg-main: rgb(241 245 249); */
+  --text-main: rgb(15 23 42);
+  /* slate-900 */
+}
+
+.dark {
+  --bg-main: rgb(2 6 23);
+  /* slate-950 */
+  --text-main: rgb(255 255 255);
+  /* white */
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(248 250 252);
-  color: rgb(15 23 42);
+  background-color: var(--bg-main);
+  color: var(--text-main);
   transition: background-color 300ms ease, color 300ms ease;
   font-family: "Inter", sans-serif;
-}
-
-html.dark body {
-  background-color: rgb(2 6 23);
-  color: rgb(255 255 255);
 }

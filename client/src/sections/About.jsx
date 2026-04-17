@@ -14,7 +14,7 @@ export default function About() {
             systems for real-world impact.
           </h2>
 
-          <div className="mt-6 space-y-5 leading-7 text-slate-600 dark:text-slate-400">
+          <div className="mt-6 space-y-5 leading-7 text-slate-700 dark:text-slate-400">
             <p>
               I’m Md Mahadi Hasan, an AI/ML Engineer and AI Researcher with
               experience in machine learning, natural language processing, large
@@ -25,14 +25,14 @@ export default function About() {
 
             <p>
               <p>
-            <p>
-            Alongside my AI work, I have over 3+ years of professional experience in
-            web development, building scalable, data-driven applications using modern
-            technologies like React.js and Next.js. I focus on bridging AI systems with
-            real-world products, ensuring solutions are both technically robust and
-            practical for users.
-          </p>
-                    </p>
+                <p>
+                  Alongside my AI work, I have over 3+ years of professional experience in
+                  web development, building scalable, data-driven applications using modern
+                  technologies like React.js and Next.js. I focus on bridging AI systems with
+                  real-world products, ensuring solutions are both technically robust and
+                  practical for users.
+                </p>
+              </p>
             </p>
 
             <p>
@@ -63,7 +63,7 @@ export default function About() {
         <div className="relative mx-auto w-full max-w-md">
           <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-cyan-500/10 blur-2xl" />
 
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white/80 p-3 shadow-2xl shadow-cyan-500/10 backdrop-blur dark:border-white/10 dark:bg-white/5">
+          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl shadow-slate-300/40 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:shadow-cyan-500/10">
             <img
               src={profileImg}
               alt="Md Mahadi Hasan"

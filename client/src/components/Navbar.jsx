@@ -80,7 +80,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/80">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-slate-950/80 shadow-sm shadow-slate-200/50 dark:shadow-none">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#home"
@@ -214,7 +214,7 @@ export default function Navbar() {
               About
             </a>
 
-            <div className="rounded-2xl border border-slate-200/70 bg-slate-50/70 p-2 dark:border-white/10 dark:bg-white/[0.03]">
+            <div className="rounded-2xl border border-slate-200 bg-slate-100/50 p-2 dark:border-white/10 dark:bg-white/[0.03]">
               <button
                 type="button"
                 onClick={() => setExpertiseOpen((prev) => !prev)}

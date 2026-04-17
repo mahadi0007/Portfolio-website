@@ -45,7 +45,7 @@ const experiences = [
   },
   {
     role: "Trainee",
-    company: "B-JET · Full-time",
+    company: "B-JET (Bangladesh Japan IT Engineer Training Program · Full-time",
     location: "Miyazaki, Japan (Remote)",
     period: "Apr 2022 – Sep 2022",
     points: [
@@ -55,7 +55,7 @@ const experiences = [
   },
   {
     role: "GMS Specialist",
-    company: "BAT · Full-time",
+    company: "British American Tobacco (BAT) · Full-time",
     location: "Dhaka, Bangladesh",
     period: "Feb 2022 – Apr 2022",
     points: [

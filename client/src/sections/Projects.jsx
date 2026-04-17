@@ -17,18 +17,18 @@ export default function Projects() {
           </p>
           <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">
             A curated selection of projects across AI/ML, intelligent systems,
-          and modern web development
+            and modern web development
           </h2>
         </div>
 
-    
+
       </div>
 
       <div className="grid gap-8">
         {featuredProjects.map((project) => (
           <article
             key={project.title}
-            className="group grid gap-6 rounded-3xl border border-slate-200 bg-white/80 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 hover:bg-white hover:shadow-xl hover:shadow-cyan-500/10 dark:border-white/10 dark:bg-white/5 dark:hover:border-cyan-400/40 dark:hover:bg-white/[0.07] lg:grid-cols-[1.2fr_0.8fr]"
+            className="group grid gap-6 rounded-3xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-slate-300/50 dark:border-white/10 dark:bg-white/5 dark:hover:border-cyan-400/40 dark:hover:bg-white/[0.07] dark:hover:shadow-cyan-500/10 lg:grid-cols-[1.2fr_0.8fr]"
           >
             <div className="rounded-2xl border border-slate-200 bg-slate-100 p-4 dark:border-white/10 dark:bg-slate-900/80">
               <div className="mb-4 flex items-center gap-2">
@@ -64,7 +64,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+                <p className="mt-4 leading-7 text-slate-700 dark:text-slate-400">
                   {project.description}
                 </p>
 

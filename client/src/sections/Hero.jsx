@@ -13,19 +13,15 @@ export default function Hero() {
           </p>
 
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-            I build AI-powered systems,
+            AI systems,
             <br />
             research-driven solutions, and
             <br />
-            production-ready web applications.
+            production-grade web apps.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg dark:text-slate-400">
-            I’m an AI/ML Engineer and AI Researcher with experience in machine
-            learning, NLP, intelligent systems, and applied product
-            development. Alongside my AI work, I also have 3+ years of  professional experience
-            building modern web applications and user-facing systems that help turn
-            research ideas into usable products.
+          <p className="mt-6 max-w-2xl text-base leading-7 text-slate-700 sm:text-lg dark:text-slate-400">
+            I’m an AI/ML Engineer and Researcher specializing in intelligent and explainable systems, with experience in LLMs, RAG, and multimodal AI. I also have 3+ years of professional experience building modern web applications, translating research into scalable, user-facing products.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -53,7 +49,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-600 dark:text-slate-400">
+          <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-700 dark:text-slate-400">
             {["Python", "LLMs", "React.js", "JavaScript", "AI/ML", "CI/CD"].map(
               (item) => (
                 <span
@@ -68,7 +64,7 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-2xl shadow-cyan-500/10 backdrop-blur dark:border-white/10 dark:bg-white/5">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl shadow-slate-300/50 backdrop-blur-sm dark:border-white/10 dark:bg-white/5 dark:shadow-cyan-500/10">
             <div className="mb-4 flex items-center gap-2">
               <span className="h-3 w-3 rounded-full bg-red-400" />
               <span className="h-3 w-3 rounded-full bg-yellow-400" />
