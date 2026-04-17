@@ -30,7 +30,7 @@ export default function AllProjects() {
                 Project Archive
               </p>
 
-              <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
+              <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
                 A complete view of my work.
               </h1>
 
@@ -65,8 +65,8 @@ export default function AllProjects() {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${isActive
-                    ? "border border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:border-cyan-400 dark:bg-cyan-400/15 dark:text-cyan-300"
-                    : "border border-slate-300 bg-white text-slate-700 hover:border-cyan-500 hover:text-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
+                  ? "border border-cyan-500 bg-cyan-500/10 text-cyan-600 dark:border-cyan-400 dark:bg-cyan-400/15 dark:text-cyan-300"
+                  : "border border-slate-300 bg-white text-slate-700 hover:border-cyan-500 hover:text-cyan-500 dark:border-white/10 dark:bg-white/5 dark:text-slate-300 dark:hover:border-cyan-400 dark:hover:text-cyan-400"
                   }`}
               >
                 {filter}

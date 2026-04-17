@@ -12,7 +12,7 @@ export default function Hero() {
             AI/ML Engineer • AI Researcher • Full Stack Web Developer
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+          <h1 className="max-w-3xl text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white">
             AI systems,
             <br />
             research-driven solutions, and
