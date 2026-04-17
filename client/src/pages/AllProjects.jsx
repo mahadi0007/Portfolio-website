@@ -21,7 +21,7 @@ export default function AllProjects() {
   }, [activeFilter])
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-white">
+    <main className="min-h-screen text-slate-900 dark:text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 sm:py-24">
         <div className="mb-12 rounded-3xl border border-slate-200 bg-white/80 p-8 backdrop-blur dark:border-white/10 dark:bg-white/[0.03]">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
