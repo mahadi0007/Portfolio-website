@@ -1,4 +1,6 @@
+# Deployment Triggered by AI Assistant
 name: Deploy Vite site to GitHub Pages
+
 
 on:
   push:
