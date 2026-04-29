@@ -45,12 +45,12 @@ const experiences = [
   },
   {
     role: "Trainee",
-    company: "B-JET (Bangladesh Japan IT Engineer Training Program · Full-time",
+    company: "B-JET (Bangladesh Japan IT Engineer Training Program)",
     location: "Miyazaki, Japan (Remote)",
     period: "Apr 2022 – Sep 2022",
     points: [
-      'Developed the "Smart Nurse System," an innovative digital healthcare system.',
-      "Contributed to a project that secured government funding, demonstrating real-world business value.",
+      "Completed intensive training in Japanese language proficiency alongside technical fundamentals, preparing for IT roles in Japan-focused environments.",
+      "Gained practical knowledge of industry-relevant technologies and Japanese business etiquette, enhancing cross-cultural communication and professional collaboration skills.",
     ],
   },
   {
@@ -59,8 +59,8 @@ const experiences = [
     location: "Dhaka, Bangladesh",
     period: "Feb 2022 – Apr 2022",
     points: [
-      'Developed the "Smart Nurse System," an innovative digital healthcare system.',
-      "Contributed to a project that secured government funding, demonstrating real-world business value.",
+      "Supported Global Manufacturing System (GMS) initiatives by analyzing operational data and assisting in process optimization to improve production efficiency and reduce downtime.",
+      "Collaborated with cross-functional teams to implement continuous improvement practices, ensuring compliance with BAT standards and enhancing overall workflow performance.",
     ],
   },
 ]

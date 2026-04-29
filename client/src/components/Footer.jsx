@@ -110,7 +110,8 @@ export default function Footer() {
                 )
               })}
 
-              <a
+{/* This is the CV preview link , but currently not available */}
+              {/* <a
                 href="/Md_Mahadi_Hasan_CV.pdf"
                 target="_blank"
                 rel="noreferrer"
@@ -123,7 +124,7 @@ export default function Footer() {
                 <span className="pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2 rounded-lg border border-slate-200 bg-white px-3 py-1 text-xs whitespace-nowrap text-slate-700 opacity-0 shadow-lg transition duration-200 group-hover:opacity-100 dark:border-white/10 dark:bg-slate-900 dark:text-slate-200">
                   Preview CV
                 </span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
