@@ -38,15 +38,15 @@ export default function Hero() {
             >
               Contact Me
             </a>
-
-            <a
+{/* This is the CV preview link , but currently not available */}
+            {/* <a
               href="/Md_Mahadi_Hasan_CV.pdf"
               target="_blank"
               rel="noreferrer"
               className="rounded-xl border border-cyan-500/40 bg-cyan-500/10 px-6 py-3 font-semibold text-cyan-600 transition hover:border-cyan-500 hover:bg-cyan-500/20 dark:border-cyan-400/40 dark:bg-cyan-400/10 dark:text-cyan-300 dark:hover:border-cyan-400 dark:hover:bg-cyan-400/20"
             >
               Preview CV
-            </a>
+            </a> */}
           </div>
 
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-slate-700 dark:text-slate-400">
