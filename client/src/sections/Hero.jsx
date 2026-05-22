@@ -1,3 +1,5 @@
+import { FaGithub } from "react-icons/fa";
+
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden py-24 sm:py-32">
@@ -31,6 +33,14 @@ export default function Hero() {
             >
               View Projects
             </a>
+            <a
+              href="https://github.com/mahadi0007"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-white transition hover:scale-[1.02] dark:bg-cyan-400 dark:text-slate-950"
+            >
+              GitHub <FaGithub className="text-lg" />
+            </a>
 
             <a
               href="#contact"
@@ -38,7 +48,7 @@ export default function Hero() {
             >
               Contact Me
             </a>
-{/* This is the CV preview link , but currently not available */}
+            {/* This is the CV preview link , but currently not available */}
             {/* <a
               href="/Md_Mahadi_Hasan_CV.pdf"
               target="_blank"
