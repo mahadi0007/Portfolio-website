@@ -137,7 +137,7 @@ export default function Navbar() {
         <Link
           to="/"
           onClick={() => scrollToSection("home")}
-          className="text-xl font-bold tracking-tight text-slate-900 transition hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400"
+          className="text-xl font-bold tracking-tight text-slate-900 transition hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400 cursor-pointer"
         >
           Md Mahadi <span className="text-cyan-500 dark:text-cyan-400">Hasan</span>
         </Link>
@@ -151,7 +151,7 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-sm font-medium transition ${
+                  className={`text-sm font-medium transition cursor-pointer ${
                     isActive
                       ? "text-cyan-500 dark:text-cyan-400"
                       : "text-slate-700 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-400"
@@ -166,7 +166,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setExpertiseOpen((prev) => !prev)}
-                className={`flex items-center gap-2 text-sm font-medium transition ${
+                className={`flex items-center gap-2 text-sm font-medium transition cursor-pointer ${
                   isExpertiseActive || expertiseOpen
                     ? "text-cyan-500 dark:text-cyan-400"
                     : "text-slate-700 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-400"
@@ -189,7 +189,7 @@ export default function Navbar() {
                       <button
                         key={link.name}
                         onClick={() => scrollToSection(link.href)}
-                        className={`block w-full text-left rounded-xl px-4 py-3 text-sm transition ${
+                        className={`block w-full text-left rounded-xl px-4 py-3 text-sm transition cursor-pointer ${
                           isActive
                             ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                             : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
@@ -210,7 +210,7 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-sm font-medium transition ${
+                  className={`text-sm font-medium transition cursor-pointer ${
                     isActive
                       ? "text-cyan-500 dark:text-cyan-400"
                       : "text-slate-700 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-400"
@@ -231,7 +231,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="text-slate-900 transition hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400"
+            className="text-slate-900 transition hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400 cursor-pointer"
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -244,7 +244,7 @@ export default function Navbar() {
           <div className="flex flex-col gap-3">
             <button
               onClick={() => scrollToSection("home")}
-              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
+              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition cursor-pointer ${
                 activeSection === "home"
                   ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                   : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
@@ -255,7 +255,7 @@ export default function Navbar() {
 
             <button
               onClick={() => scrollToSection("about")}
-              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
+              className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition cursor-pointer ${
                 activeSection === "about"
                   ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                   : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
@@ -268,7 +268,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setExpertiseOpen((prev) => !prev)}
-                className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-medium transition ${
+                className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-sm font-medium transition cursor-pointer ${
                   isExpertiseActive || expertiseOpen
                     ? "text-cyan-500 dark:text-cyan-400"
                     : "text-slate-700 hover:text-cyan-500 dark:text-slate-300 dark:hover:text-cyan-400"
@@ -291,7 +291,7 @@ export default function Navbar() {
                       <button
                         key={link.name}
                         onClick={() => scrollToSection(link.href)}
-                        className={`text-left rounded-xl px-4 py-3 text-sm transition ${
+                        className={`text-left rounded-xl px-4 py-3 text-sm transition cursor-pointer ${
                           isActive
                             ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                             : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
@@ -312,7 +312,7 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition ${
+                  className={`text-left rounded-xl px-4 py-3 text-sm font-medium transition cursor-pointer ${
                     isActive
                       ? "bg-cyan-500/10 text-cyan-600 dark:bg-cyan-400/10 dark:text-cyan-400"
                       : "text-slate-700 hover:bg-slate-100 hover:text-cyan-500 dark:text-slate-300 dark:hover:bg-white/5 dark:hover:text-cyan-400"
